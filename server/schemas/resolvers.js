@@ -1,10 +1,10 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Charger } = require('../models');
 const { signToken } = require('../utils/auth');
-const { status, stopCharging, startCharging, setPower } = require('../utils/ocppApi');
+// const { status, stopCharging, startCharging, setPower } = require('../utils/ocppApi');
 
-// USE OCPP API OVERWRITE INSTEAD FOR TESTING PURPOSE ONLY
-// const { status, stopCharging, startCharging, setPower } = require('../utils/ocppApiOverwrite');
+//USE OCPP API OVERWRITE INSTEAD FOR TESTING PURPOSE ONLY
+const { status, stopCharging, startCharging, setPower } = require('../utils/ocppApiOverwrite');
 
 const resolvers = {
   Query: {
